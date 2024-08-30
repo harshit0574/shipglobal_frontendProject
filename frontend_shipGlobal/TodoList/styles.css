@@ -1,0 +1,132 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #dbe6f6, #ffffff); /* Gradient background */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+  }
+  
+  .todo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    width: 100%;
+    max-width: 1200px;
+    overflow-x: auto;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.9); /* Slight background tint */
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .todo-card {
+    background: linear-gradient(145deg, #ffffff, #f9f9f9); /* Subtle card gradient */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 300px;
+    box-sizing: border-box;
+    flex-shrink: 0;
+    position: relative;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .todo-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  }
+  
+  .todo-card h2 {
+    margin-top: 0;
+    color: #333;
+    font-size: 1.6em; /* Increase header font size */
+    font-weight: 600;
+    text-align: center;
+    border-bottom: 2px solid #3498db;
+    padding-bottom: 10px;
+    margin-bottom: 15px;
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-list li {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 10px;
+    margin-bottom: 10px;
+    color: #333;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .todo-list li:hover {
+    background-color: #eaf4fc; /* Light hover effect */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .nav-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+  }
+  
+  .nav-button {
+    background-color: #3498db;
+    border: none;
+    color: white;
+    font-size: 28px; /* Increase font size for arrows */
+    padding: 12px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 50px; /* Ensure buttons are of uniform size */
+    height: 50px; /* Ensure buttons are of uniform size */
+    text-align: center;
+  }
+  
+  .nav-button:hover {
+    background-color: #2980b9;
+    transform: scale(1.1);
+  }
+  
+  .nav-button:disabled {
+    background-color: #bdc3c7;
+    cursor: not-allowed;
+  }
+  
+  @media (max-width: 768px) {
+    .todo-container {
+      flex-direction: column;
+      gap: 15px;
+    }
+  
+    .todo-card {
+      width: 100%;
+    }
+  
+    .nav-button {
+      font-size: 24px; /* Slightly smaller font size on smaller screens */
+      width: 45px; /* Adjust button size for smaller screens */
+      height: 45px; /* Adjust button size for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .nav-button {
+      font-size: 20px; /* Further reduce font size for very small screens */
+      width: 40px; /* Adjust button size for very small screens */
+      height: 40px; /* Adjust button size for very small screens */
+    }
+  }
+  

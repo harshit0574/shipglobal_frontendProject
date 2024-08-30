@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Todo List with Status Navigation</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="todo-container">
+    <div class="todo-card" id="backlog">
+      <h2>Backlog</h2>
+      <ul class="todo-list" id="backlog-list">
+        <!-- Todo items will be added here dynamically -->
+      </ul>
+      <div class="nav-buttons">
+        <button class="nav-button left" id="backlog-left" disabled>&#10094;</button>
+        <button class="nav-button right" id="backlog-right">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="todo-card" id="todo">
+      <h2>To Do</h2>
+      <ul class="todo-list" id="todo-list">
+        <!-- Todo items will be added here dynamically -->
+      </ul>
+      <div class="nav-buttons">
+        <button class="nav-button left" id="todo-left">&#10094;</button>
+        <button class="nav-button right" id="todo-right">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="todo-card" id="ongoing">
+      <h2>Ongoing</h2>
+      <ul class="todo-list" id="ongoing-list">
+        <!-- Todo items will be added here dynamically -->
+      </ul>
+      <div class="nav-buttons">
+        <button class="nav-button left" id="ongoing-left">&#10094;</button>
+        <button class="nav-button right" id="ongoing-right">&#10095;</button>
+      </div>
+    </div>
+
+    <div class="todo-card" id="done">
+      <h2>Done</h2>
+      <ul class="todo-list" id="done-list">
+        <!-- Todo items will be added here dynamically -->
+      </ul>
+      <div class="nav-buttons">
+        <button class="nav-button left" id="done-left">&#10094;</button>
+        <button class="nav-button right" id="done-right" disabled>&#10095;</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="Todo.js"></script>
+</body>
+</html>
